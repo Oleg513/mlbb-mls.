@@ -1,1 +1,17 @@
+name: Run Project Structure Script
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository content
+      uses: actions/checkout@v2
+
+    - name: Run Project Structure Script
+      run: |
+        chmod +x create_project_structure.sh
+        ./create_project_structure.sh
 
