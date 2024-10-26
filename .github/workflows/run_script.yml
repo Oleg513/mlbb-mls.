@@ -12,6 +12,4 @@ jobs:
 
     - name: Run Project Structure Script
       run: |
-        chmod +x create_project_structure.sh
-        ./create_project_structure.sh
-
+        touch main.py heroes_tanks.json characters.json passive_skills.json menu_requests.json prompts.json prompts_message.html
