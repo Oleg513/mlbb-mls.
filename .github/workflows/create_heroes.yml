@@ -1,0 +1,227 @@
+# .github/workflows/create_heroes.yml
+
+name: Create Heroes JSON Files
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create_heroes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Create Folders and JSON Files
+        run: |
+          mkdir -p data/heroes_tanks/Belerick
+          mkdir -p data/heroes_tanks/Baxia
+          mkdir -p data/heroes_tanks/Grock
+          mkdir -p data/heroes_tanks/Atlas
+
+          # Belerick.json
+          cat <<-EOF > data/heroes_tanks/Belerick/Belerick.json
+          {
+            "name": "Belerick",
+            "class": "Танк / Підтримка",
+            "role": "Захисник і маг",
+            "speed": "Середня",
+            "hp": "Високе",
+            "physical_defense": "Добрий",
+            "magical_defense": "Середній",
+            "attack_speed": "Середня",
+            "skills": [
+              {
+                "name": "Deadly Thorns",
+                "mana_cost": 50,
+                "cooldown": "10 секунд"
+              },
+              {
+                "name": "Ancient Seed",
+                "mana_cost": 60,
+                "cooldown": "9 секунд"
+              },
+              {
+                "name": "Nature's Strike",
+                "mana_cost": 50,
+                "cooldown": "7 секунд"
+              },
+              {
+                "name": "Wrath of Dryad",
+                "mana_cost": 100,
+                "cooldown": "40 секунд"
+              }
+            ],
+            "strategies": {
+              "aggressive": "Використовувати навички для контролю ворогів і завдання шкоди.",
+              "defensive": "Захищати союзників та відбивати шкоду.",
+              "micro": "Позиціонування та використання навичок для затримки ворогів."
+            },
+            "recommendations": {
+              "early_game": "Підтримка лінії та контроль ворогів.",
+              "mid_game": "Ініціювання боїв та затримка ворогів.",
+              "late_game": "Захист союзників та підтримка фронту."
+            },
+            "drafts": {
+              "ideal_allies": "Герої, що добре поєднуються з Belerick.",
+              "avoid_enemies": "Типи ворогів, яких слід уникати.",
+              "strong_drafts": "Командні склади з Belerick як ініціатором."
+            }
+          }
+          EOF
+
+          # Baxia.json
+          cat <<-EOF > data/heroes_tanks/Baxia/Baxia.json
+          {
+            "name": "Baxia",
+            "class": "Танк",
+            "role": "Танк",
+            "speed": "Висока",
+            "hp": "Високе",
+            "physical_defense": "Добрий",
+            "magical_defense": "Середній",
+            "attack_speed": "Середня",
+            "skills": [
+              {
+                "name": "Baxia Mark",
+                "mana_cost": 40,
+                "cooldown": "12 секунд"
+              },
+              {
+                "name": "Shield Unity",
+                "mana_cost": 70,
+                "cooldown": "11 секунд"
+              },
+              {
+                "name": "Tortoise's Puissance",
+                "mana_cost": 50,
+                "cooldown": "8 секунд"
+              },
+              {
+                "name": "Bounce, Bounce",
+                "mana_cost": 120,
+                "cooldown": "40 секунд"
+              }
+            ],
+            "strategies": {
+              "aggressive": "Використовувати високу швидкість для ініціювання боїв та пресингу ворогів.",
+              "defensive": "Захищати союзників і зменшувати отриману шкоду навичками.",
+              "micro": "Позиціонування та контроль простору за допомогою навичок."
+            },
+            "recommendations": {
+              "early_game": "Фарм та захист лінії.",
+              "mid_game": "Ініціювання боїв та контроль ворогів.",
+              "late_game": "Підтримка команди та захист ключових героїв."
+            },
+            "drafts": {
+              "ideal_allies": "Герої, що добре поєднуються з Baxia.",
+              "avoid_enemies": "Типи ворогів, яких слід остерігатися.",
+              "strong_drafts": "Командні склади з Baxia як ініціатором."
+            }
+          }
+          EOF
+
+          # Grock.json
+          cat <<-EOF > data/heroes_tanks/Grock/Grock.json
+          {
+            "name": "Grock",
+            "class": "Танк",
+            "role": "Танк / Підтримка",
+            "speed": "Середня, збільшується біля стін",
+            "hp": "Високе",
+            "physical_defense": "Добрий",
+            "magical_defense": "Середній",
+            "attack_speed": "Середня",
+            "skills": [
+              {
+                "name": "Ancestral Gift",
+                "mana_cost": 60,
+                "cooldown": "8 секунд"
+              },
+              {
+                "name": "Power of Nature",
+                "mana_cost": 60,
+                "cooldown": "7 секунд"
+              },
+              {
+                "name": "Guardian's Barrier",
+                "mana_cost": 70,
+                "cooldown": "12 секунд"
+              },
+              {
+                "name": "Wild Charge",
+                "mana_cost": 100,
+                "cooldown": "40 секунд"
+              }
+            ],
+            "strategies": {
+              "aggressive": "Ініціювати бої, завдаючи шкоди та контролюючи ворогів.",
+              "defensive": "Захищати команду за допомогою стін та щитів.",
+              "micro": "Контроль простору та розділення ворогів."
+            },
+            "recommendations": {
+              "early_game": "Фарм та захист лінії.",
+              "mid_game": "Ініціювання боїв та контроль ворогів.",
+              "late_game": "Підтримка команди та контроль важливих зон."
+            },
+            "drafts": {
+              "ideal_allies": "Герої, що добре поєднуються з Grock.",
+              "avoid_enemies": "Типи ворогів, яких слід остерігатися.",
+              "strong_drafts": "Командні склади з Grock як контролером простору."
+            }
+          }
+          EOF
+
+          # Atlas.json
+          cat <<-EOF > data/heroes_tanks/Atlas/Atlas.json
+          {
+            "name": "Atlas",
+            "class": "Танк",
+            "role": "Танк / Ініціатор",
+            "speed": "Середня",
+            "hp": "3109 на 1 рівні, зростає до 7000+ на максимальному рівні",
+            "physical_defense": "Добрий",
+            "magical_defense": "Середній",
+            "attack_speed": "Середня",
+            "skills": [
+              {
+                "name": "Frigid Breath",
+                "mana_cost": 45,
+                "cooldown": "10 секунд"
+              },
+              {
+                "name": "Perfect Match",
+                "mana_cost": 70,
+                "cooldown": "12 секунд"
+              },
+              {
+                "name": "Fatal Links",
+                "mana_cost": 150,
+                "cooldown": "48 секунд"
+              }
+            ],
+            "strategies": {
+              "aggressive": "Використовувати навички для ініціювання боїв та контролю ворогів.",
+              "defensive": "Захищати команду, сповільнюючи та знижуючи атаки ворогів.",
+              "micro": "Позиціонування та використання навичок для максимального контролю."
+            },
+            "recommendations": {
+              "early_game": "Фарм та контроль лінії.",
+              "mid_game": "Ініціювання боїв та контроль ворогів.",
+              "late_game": "Підтримка команди та максимальне використання навичок."
+            },
+            "drafts": {
+              "ideal_allies": "Герої, що добре поєднуються з Atlas.",
+              "avoid_enemies": "Типи ворогів, яких слід остерігатися.",
+              "strong_drafts": "Командні склади з Atlas як ініціатором."
+            }
+          }
+          EOF
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Automated: Add JSON files for Belerick, Baxia, Grock, and Atlas"
+          branch: main
+          
