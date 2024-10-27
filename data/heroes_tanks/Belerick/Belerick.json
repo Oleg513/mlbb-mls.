@@ -1,0 +1,47 @@
+{
+  "name": "Belerick",
+  "class": "Танк / Підтримка",
+  "role": "Захисник і маг",
+  "speed": "Середня",
+  "hp": "Високе",
+  "physical_defense": "Добрий",
+  "magical_defense": "Середній",
+  "attack_speed": "Середня",
+  "skills": [
+    {
+      "name": "Deadly Thorns",
+      "mana_cost": 50,
+      "cooldown": "10 секунд"
+    },
+    {
+      "name": "Ancient Seed",
+      "mana_cost": 60,
+      "cooldown": "9 секунд"
+    },
+    {
+      "name": "Nature's Strike",
+      "mana_cost": 50,
+      "cooldown": "7 секунд"
+    },
+    {
+      "name": "Wrath of Dryad",
+      "mana_cost": 100,
+      "cooldown": "40 секунд"
+    }
+  ],
+  "strategies": {
+    "aggressive": "Використовувати навички для контролю ворогів і завдання шкоди.",
+    "defensive": "Захищати союзників та відбивати шкоду.",
+    "micro": "Позиціонування та використання навичок для затримки ворогів."
+  },
+  "recommendations": {
+    "early_game": "Підтримка лінії та контроль ворогів.",
+    "mid_game": "Ініціювання боїв та затримка ворогів.",
+    "late_game": "Захист союзників та підтримка фронту."
+  },
+  "drafts": {
+    "ideal_allies": "Герої, що добре поєднуються з Belerick.",
+    "avoid_enemies": "Типи ворогів, яких слід уникати.",
+    "strong_drafts": "Командні склади з Belerick як ініціатором."
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Grock",
+  "class": "Танк",
+  "role": "Танк / Підтримка",
+  "speed": "Середня, збільшується біля стін",
+  "hp": "Високе",
+  "physical_defense": "Добрий",
+  "magical_defense": "Середній",
+  "attack_speed": "Середня",
+  "skills": [
+    {
+      "name": "Ancestral Gift",
+      "mana_cost": 60,
+      "cooldown": "8 секунд"
+    },
+    {
+      "name": "Power of Nature",
+      "mana_cost": 60,
+      "cooldown": "7 секунд"
+    },
+    {
+      "name": "Guardian's Barrier",
+      "mana_cost": 70,
+      "cooldown": "12 секунд"
+    },
+    {
+      "name": "Wild Charge",
+      "mana_cost": 100,
+      "cooldown": "40 секунд"
+    }
+  ],
+  "strategies": {
+    "aggressive": "Ініціювати бої, завдаючи шкоди та контролюючи ворогів.",
+    "defensive": "Захищати команду за допомогою стін та щитів.",
+    "micro": "Контроль простору та розділення ворогів."
+  },
+  "recommendations": {
+    "early_game": "Фарм та захист лінії.",
+    "mid_game": "Ініціювання боїв та контроль ворогів.",
+    "late_game": "Підтримка команди та контроль важливих зон."
+  },
+  "drafts": {
+    "ideal_allies": "Герої, що добре поєднуються з Grock.",
+    "avoid_enemies": "Типи ворогів, яких слід остерігатися.",
+    "strong_drafts": "Командні склади з Grock як контролером простору."
+  }
+}
